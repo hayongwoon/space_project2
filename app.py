@@ -30,7 +30,7 @@ def file_upload():
     mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
     filename = f'{mytime}'
     # 파일 저장 경로 설정 (파일은 서버 컴퓨터 자체에 저장됨)
-    save_to = f'static/img/catdog/{filename}.{extension}'
+    save_to = f'static/img/{filename}.{extension}'
     # 파일 저장!
     file.save(save_to)
 
