@@ -7,7 +7,6 @@
 #image-container {
     display: flex;
     width: 100%;
-    ;
 }
 
 .img-box {
@@ -34,4 +33,18 @@
 
 #progressBar {
     width: 100%;
+}
+
+#alert-container{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
 }
