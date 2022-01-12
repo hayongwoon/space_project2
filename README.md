@@ -1,4 +1,7 @@
-# space_project2
+# space_project
+
+노션 링크 - https://www.notion.so/14-83ce004ff8614504b0ce09c75c221a03
+
 # 프로젝트 개요
 
 화면에 제시된 요가 동작 사진을 업로드하여 성공하면 다음 기능에 접근할 수 있습니다.
