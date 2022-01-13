@@ -37,14 +37,22 @@
 
 #alert-container{
     width:100%;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.show{
-    display: flex;
+.alert-wrapper{
+    width: 500px;
 }
 
-.hide{
-    display: none;
+#success-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yoga-dif-pose{
+    margin-top: 20px;
 }

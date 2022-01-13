@@ -15,6 +15,7 @@ model = tf.keras.models.load_model('static/model/model.h5')
 # 모델 생성 시 출력층을 sigmoid 로 설정했다면 0~1로 아웃풋이 나올 것
 app = Flask(__name__)
 model_class = ['goddess', 'mountain', 'warrior2']
+
 @app.route('/')
 def home():
     return render_template('index.html')

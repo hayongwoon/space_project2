@@ -1,5 +1,6 @@
 $(document).on("input", "input:file", function () {
     readURL(this)
+    document.getElementById('user-img').classList.replace('invisible','visible')
 });
 
 function readURL(input) {
@@ -38,7 +39,7 @@ function startTimer(duration, display, bar) {
 }
 
 function showAlert(){
-    document.getElementById('alert-container').classList.replace('hide','show')
+    document.getElementById('alert-container').classList.replace('invisible','visible')
 }
 
 // document.querySelector는 CSS의 클래스, 아이디를 찾아 같은 값을 반환합니다.
@@ -49,3 +50,16 @@ window.onload = function () {
     startTimer(minutes, display, bar);
 };
 
+var imgArray = new Array();
+	imgArray[0] = "/static/yoga-img/1.jpeg";
+	imgArray[1] = "/static/yoga-img/2.jpeg";
+	imgArray[2] = "/static/yoga-img/3.jpeg";
+	imgArray[3] = "/static/yoga-img/4.jpeg";
+
+function showImage() {
+    var imgNum = Math.round(Math.random() * 3);
+    var objImg = document.getElementById("yogaImg");
+    objImg.src = imgArray[imgNum];
+}
+
+$(document).ready(function() {showImage()});
