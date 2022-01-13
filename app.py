@@ -3,8 +3,8 @@ from datetime import datetime
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import numpy as np
-from keras.preprocessing import image
-from keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.vgg16 import preprocess_input
 import os
 
 # 학습시킨 binary classification model 불러오기 (출력층을 sigmoid 로 설정했기에, predict 하면 아웃풋이 0~1 로 나옴)
@@ -14,8 +14,7 @@ model = tf.keras.models.load_model('static/model/model.h5')
 # 모델 생성 시 출력층을 softmax 로 설정했다면 카테고리 갯수만큼 아웃풋이 나올 것
 # 모델 생성 시 출력층을 sigmoid 로 설정했다면 0~1로 아웃풋이 나올 것
 app = Flask(__name__)
-model_class = ['downdog', 'tree', 'warrior1']
-
+model_class = ['downdog', 'goddess', 'plank', 'tree', 'warrior2']
 @app.route('/')
 def home():
     return render_template('index.html')
