@@ -1,5 +1,6 @@
 $(document).on("input", "input:file", function () {
     readURL(this)
+    document.getElementById('user-img').classList.replace('invisible','visible')
 });
 
 function readURL(input) {
@@ -38,7 +39,7 @@ function startTimer(duration, display, bar) {
 }
 
 function showAlert(){
-    document.getElementById('alert-container').classList.replace('hide','show')
+    document.getElementById('alert-container').classList.replace('invisible','visible')
 }
 
 // document.querySelector는 CSS의 클래스, 아이디를 찾아 같은 값을 반환합니다.
