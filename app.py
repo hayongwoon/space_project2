@@ -14,7 +14,7 @@ model = tf.keras.models.load_model('static/model/model.h5')
 # 모델 생성 시 출력층을 softmax 로 설정했다면 카테고리 갯수만큼 아웃풋이 나올 것
 # 모델 생성 시 출력층을 sigmoid 로 설정했다면 0~1로 아웃풋이 나올 것
 app = Flask(__name__)
-model_class = ['downdog', 'tree', 'warrior1']
+model_class = ['downdog', 'goddess', 'plank', 'tree', 'warrior2']
 
 @app.route('/')
 def home():
@@ -36,7 +36,7 @@ def file_upload():
     # 파일 저장!
     file.save(save_to)
     # 바로 이미지 불러와서 형식 바꿔준다
-    img = image.load_img(save_to, target_size=(300, 300))
+    img = image.load_img(save_to, target_size=(224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     img_data = preprocess_input(x)
