@@ -62,5 +62,11 @@ function showImage() {
     let objImg = document.getElementById("yoga-img");
     document.getElementById('yoga-img').classList.replace('invisible','visible')
     objImg.src = imgArray[imgNum];
+    able_button()
+}
+
+function able_button() {
     document.getElementById('btn').disabled = false;
+    document.getElementById('check-button').disabled = false;
+    document.getElementById('file-input').disabled = false;
 }
