@@ -35,7 +35,6 @@ function startTimer(duration, display, bar) {
             showAlert()
             showImage()
             clearInterval(time_set)
-            $(document).ready(function() {showImage()});
         }
     }, 1000);
 }

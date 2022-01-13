@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 5%;
 }
 
 #time {
@@ -47,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .alert-wrapper{
