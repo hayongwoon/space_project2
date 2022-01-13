@@ -22,13 +22,18 @@
     <span id="time">00:05</span>
 </div>
 <div id="main_container">
+
     <div id="clock_container"></div>
+
     <div id="image-container" class="d-grid gap-4 d-md-flex">
-        <div class="img-box shadow p-3 mb-5 bg-body rounded"></div>
+        <div class="img-box shadow p-3 mb-5 bg-body rounded">
+            <img style="width: 100%;" id="random-img" src="#" alt=""/>
+        </div>
         <div class="img-box shadow p-3 mb-5 bg-body rounded">
             <img style="width: 100%;" id="user-img" src="#" alt=""/>
         </div>
     </div>
+
     <div id="alert-container" class="hide">
         <div class="alert alert-warning d-flex align-items-center" role="alert">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-alarm"
@@ -41,10 +46,12 @@
             </span>
         </div>
     </div>
+
     <div id="button-container" class="d-grid gap-2">
         <input type="file" id="img-input" class="btn-file" style="display: none"/>
-<!--        post 방식으로 해서 서버에 정보를 보내주기 위해 form태그 사용 - > 업로드 한 이미지가 서버에 전달 -->
-        <form class="btn btn-outline-warning btn-lg" for="img-input" method="POST" enctype="multipart/form-data" action="{{ url_for('file_upload') }}">
+        <!--        post 방식으로 해서 서버에 정보를 보내주기 위해 form태그 사용 - > 업로드 한 이미지가 서버에 전달 -->
+        <form class="btn btn-outline-warning btn-lg" for="img-input" method="POST" enctype="multipart/form-data"
+              action="{{ url_for('file_upload') }}">
             <input type="file" name="file_give"/>
             <button type="submit" class="btn btn-dark btn-lg ">동작 확인</button>
         </form>

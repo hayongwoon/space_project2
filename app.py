@@ -3,18 +3,18 @@ from datetime import datetime
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import numpy as np
-from keras.preprocessing import image
-from keras.applications.vgg16 import preprocess_input
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.applications.vgg16 import preprocess_input
 import os
 
 # 학습시킨 binary classification model 불러오기 (출력층을 sigmoid 로 설정했기에, predict 하면 아웃풋이 0~1 로 나옴)
-model = tf.keras.models.load_model('static/model/model.h5')
+model = tf.keras.models.load_model('static/model/yoga_model.h5')
 # 해당 모델은 아웃풋이 0이면 고양이, 1이면 강아지라고 판별한 것
 # 아웃풋이 어떤지는 모델 생성 시 출력층을 어떻게 구성했는지에 따라 얼마든지 달라질 수 있음에 유의
 # 모델 생성 시 출력층을 softmax 로 설정했다면 카테고리 갯수만큼 아웃풋이 나올 것
 # 모델 생성 시 출력층을 sigmoid 로 설정했다면 0~1로 아웃풋이 나올 것
 app = Flask(__name__)
-model_class = ['downdog', 'tree', 'warrior1']
+model_class = ['downdog', 'goddess', 'plank', 'tree', 'warrior2']
 
 @app.route('/')
 def home():
@@ -36,7 +36,7 @@ def file_upload():
     # 파일 저장!
     file.save(save_to)
     # 바로 이미지 불러와서 형식 바꿔준다
-    img = image.load_img(save_to, target_size=(300, 300))
+    img = image.load_img(save_to, target_size=(224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     img_data = preprocess_input(x)
