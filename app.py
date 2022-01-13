@@ -14,7 +14,7 @@ model = tf.keras.models.load_model('static/model/model.h5')
 # 모델 생성 시 출력층을 softmax 로 설정했다면 카테고리 갯수만큼 아웃풋이 나올 것
 # 모델 생성 시 출력층을 sigmoid 로 설정했다면 0~1로 아웃풋이 나올 것
 app = Flask(__name__)
-model_class = ['downdog', 'goddess', 'plank', 'tree', 'warrior2']
+model_class = ['goddess', 'mountain', 'warrior2']
 
 @app.route('/')
 def home():
@@ -43,7 +43,8 @@ def file_upload():
     classes = model.predict(img_data)
     # 예측값의 최대값 인덱스를 만들어 놓은 클래스에 맞게 보낸다
     return jsonify({'result': model_class[classes.argmax()]})
-#
+
+
 # @app.route('/result')
 # def result():
 #     # 모델은 불러와져 있으니, 사용자가 올린 데이터를 predict 함수에 넣어주면 됨
@@ -71,4 +72,4 @@ def file_upload():
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5001, debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)

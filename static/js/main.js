@@ -50,3 +50,16 @@ window.onload = function () {
     startTimer(minutes, display, bar);
 };
 
+var imgArray = new Array();
+	imgArray[0] = "/static/yoga-img/1.jpeg";
+	imgArray[1] = "/static/yoga-img/2.jpeg";
+	imgArray[2] = "/static/yoga-img/3.jpeg";
+	imgArray[3] = "/static/yoga-img/4.jpeg";
+
+function showImage() {
+    var imgNum = Math.round(Math.random() * 3);
+    var objImg = document.getElementById("yogaImg");
+    objImg.src = imgArray[imgNum];
+}
+
+$(document).ready(function() {showImage()});
