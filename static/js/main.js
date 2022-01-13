@@ -35,6 +35,7 @@ function startTimer(duration, display, bar) {
             showAlert()
             showImage()
             clearInterval(time_set)
+            $(document).ready(function() {showImage()});
         }
     }, 1000);
 }
@@ -52,9 +53,10 @@ window.onload = function () {
 };
 
 let imgArray = [];
-	imgArray[0] = "/static/goddess.jpeg";
-	imgArray[1] = "/static/mountain.jpeg";
-	imgArray[2] = "/static/warrior2.jpeg";
+	imgArray[0] = "/static/yoga-img/1.jpeg";
+	imgArray[1] = "/static/yoga-img/2.jpeg";
+	imgArray[2] = "/static/yoga-img/3.jpeg";
+    imgArray[3] = "/static/yoga-img/3.jpeg";
 
 function showImage() {
     const imgNum = Math.round(Math.random() * 3);
