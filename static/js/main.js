@@ -52,13 +52,14 @@ window.onload = function () {
 };
 
 let imgArray = [];
-	imgArray[0] = "/static/yoga-img/1.jpeg";
-	imgArray[1] = "/static/yoga-img/2.jpeg";
-	imgArray[2] = "/static/yoga-img/3.jpeg";
-    imgArray[3] = "/static/yoga-img/3.jpeg";
+	imgArray[0] = "/static/yoga-img/downdog.jpeg";
+	imgArray[1] = "/static/yoga-img/goddess.jpeg";
+	imgArray[2] = "/static/yoga-img/plank.jpeg";
+    imgArray[3] = "/static/yoga-img/tree.jpeg";
+    imgArray[4] = "/static/yoga-img/worrier2.jpeg";
 
 function showImage() {
-    const imgNum = Math.round(Math.random() * 3);
+    const imgNum = Math.round(Math.random() * 4);
     let objImg = document.getElementById("yoga-img");
     document.getElementById('yoga-img').classList.replace('invisible','visible')
     objImg.src = imgArray[imgNum];
@@ -70,4 +71,57 @@ function able_button() {
     document.getElementById('check-button').disabled = false;
     document.getElementById('file-input').disabled = false;
 }
+//
+// function checkImage(){
+//     var prerandomYogaImg = document.getElementById('yoga-img').src.split('/');
+//     var randomYogaImg = prerandomYogaImg[5].split(".")[0];
+//     console.log(randomYogaImg)
+//
+//     $.ajax({
+//         type: "GET",
+//         url: "/fileupload",
+//         contentType: "application/json; charset=utf-8",
+//         data: {},
+//         success: function (response){
+//             alert(response);
+//         }
+//     });
+function checkImage(){
+    var prerandomYogaImg = document.getElementById('yoga-img').src.split('/');
+    var randomYogaImg = prerandomYogaImg[5].split(".")[0];
 
+
+    // alert(yoga_img)
+    alert(randomYogaImg);
+
+}
+
+function posting() {
+    let file = $('#file-input')[0].files[0]
+    let form_data = new FormData()
+    var prerandomYogaImg = document.getElementById('yoga-img').src.split('/');
+    var randomYogaImg = prerandomYogaImg[5].split(".")[0];
+
+    form_data.append("file_give", file)
+
+    $.ajax({
+        type: "POST",
+        url: "/fileupload",
+        data: form_data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            alert(response["result"])
+            alert(randomYogaImg)
+            if (response["result"] == randomYogaImg){
+                alert('coreect')
+            }
+            else{
+                alert('x')
+            }
+            // alert(response["result"])
+            // window.location.reload()
+        }
+    });
+}

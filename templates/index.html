@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/static/js/main.js" type="text/javascript"></script>
+
     <title>YOGA</title>
 </head>
 <body>
@@ -73,11 +74,10 @@
 
     <div id="button-container" class="d-grid gap-2">
         <!--        post 방식으로 해서 서버에 정보를 보내주기 위해 form태그 사용 - > 업로드 한 이미지가 서버에 전달 -->
-        <form class="btn btn-outline-warning btn-lg" method="POST" enctype="multipart/form-data"
-              action="{{ url_for('file_upload') }}">
+        <div class="btn btn-outline-warning btn-lg">
             <input type="file" name="file_give" id="file-input" disabled/>
-            <button type="submit" class="btn btn-dark btn-lg" id="check-button" disabled>동작 확인</button>
-        </form>
+            <button onclick="posting()" class="btn btn-dark btn-lg" id="check-button" disabled/>동작 확인</button>
+        </div>
     </div>
 
     <div id="success-container" class="invisible">

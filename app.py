@@ -42,10 +42,14 @@ def file_upload():
     img_data = preprocess_input(x)
     classes = model.predict(img_data)
     # 예측값의 최대값 인덱스를 만들어 놓은 클래스에 맞게 보낸다
+
+    #yogaFile = request.form['randomYogaImg']
+    #return jsonify({'result': yogaFile})
     return jsonify({'result': model_class[classes.argmax()]})
+    #return render_template('index.html', modelValue = model_class[classes.argmax()])
 
-
-# @app.route('/result')
+#
+# @app.route('/result', methods=['POST'])
 # def result():
 #     # 모델은 불러와져 있으니, 사용자가 올린 데이터를 predict 함수에 넣어주면 됨
 #     # 이미지이기에, rescale 및 size 조정을 위해 ImageDataGenerator 활용
@@ -54,7 +58,7 @@ def file_upload():
 #     test_generator = test_datagen.flow_from_directory(
 #         test_dir,
 #         # target_size 는 학습할때 설정했던 사이즈와 일치해야 함
-#         target_size=(300, 300),
+#         target_size=(224, 224),
 #         color_mode="rgb",
 #         shuffle=False,
 #         # test 셋의 경우, 굳이 클래스가 필요하지 않음
@@ -68,7 +72,7 @@ def file_upload():
 #         result = '강아지'
 #     else:
 #         result = '고양이'
-#     return render_template('result.html', result=result)
+#     return render_template('index.html', result=result)
 
 
 if __name__ == '__main__':
