@@ -106,14 +106,12 @@
     display: none;
 }
 
-.camera-modal-open-btn {
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
 #vid {
     width: 200px;
     height: 200px;
+}
+
+.camera-modal-open-btn {
+    margin-top: 5%;
 }

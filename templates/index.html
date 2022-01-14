@@ -33,13 +33,17 @@
             </div>
         </form>
         <div class="img-box shadow mb-5 bg-body rounded">
-            <img style="width:100%; height: 100%;" class="invisible rounded" id="user-img" src="#" alt=""/>
+            <img style="width:100%; height: 100%;" class="invisible rounded " id="user-img" src="#" alt=""/>
+            <div class="btn-wrapper">
+                <button class='camera-modal-open-btn btn btn-outline-secondary'>카메라</button>
+            </div>
         </div>
-    </div>
+
+        </div>
 
 
 
-    <button class='camera-modal-open-btn'>카메라</button>
+
     <div class='camera-modal hidden'>
         <div class="bg"></div>
         <div class="modalBox">
@@ -47,8 +51,8 @@
             <video id="vid"></video>
 
             {# 사진 찍기 버튼#}
-            <button class="snapshot">사진 찍기</button>
-            <button class="modal_close_btn">닫기</button>
+            <button class="snapshot btn btn-outline-secondary">사진 찍기</button>
+            <button class="modal_close_btn btn btn-outline-secondary">닫기</button>
 
         </div>
     </div>
