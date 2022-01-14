@@ -65,3 +65,55 @@
 .yoga-dif-pose{
     margin-top: 20px;
 }
+
+/*카메라*/
+.camera-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: white;
+}
+
+.camera-modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalBox {
+    z-index: 5;
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+}
+
+.modalBox button {
+    z-index: 5;
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.camera-modal-open-btn {
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#vid {
+    width: 200px;
+    height: 200px;
+}
