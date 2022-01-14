@@ -17,12 +17,20 @@
     margin: auto;
 }
 
+.btn-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 5%;
 }
 
 #time {
@@ -40,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .alert-wrapper{

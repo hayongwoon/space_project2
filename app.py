@@ -43,7 +43,8 @@ def file_upload():
     classes = model.predict(img_data)
     # 예측값의 최대값 인덱스를 만들어 놓은 클래스에 맞게 보낸다
     return jsonify({'result': model_class[classes.argmax()]})
-#
+
+
 # @app.route('/result')
 # def result():
 #     # 모델은 불러와져 있으니, 사용자가 올린 데이터를 predict 함수에 넣어주면 됨
@@ -71,4 +72,4 @@ def file_upload():
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=5001, debug=True)
+    app.run('0.0.0.0', port=5000, debug=True)

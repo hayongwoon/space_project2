@@ -33,6 +33,7 @@ function startTimer(duration, display, bar) {
         // timeout 이 1000일 때는 1초 10000일 때는 10초의 지연시간이 있고 다시 실행을 반복합니다.(위의 setInterval 메서드)
         if (--timer < 0) {
             showAlert()
+            showImage()
             clearInterval(time_set)
         }
     }, 1000);
@@ -50,16 +51,22 @@ window.onload = function () {
     startTimer(minutes, display, bar);
 };
 
-var imgArray = new Array();
+let imgArray = [];
 	imgArray[0] = "/static/yoga-img/1.jpeg";
 	imgArray[1] = "/static/yoga-img/2.jpeg";
 	imgArray[2] = "/static/yoga-img/3.jpeg";
-	imgArray[3] = "/static/yoga-img/4.jpeg";
+    imgArray[3] = "/static/yoga-img/3.jpeg";
 
 function showImage() {
-    var imgNum = Math.round(Math.random() * 3);
-    var objImg = document.getElementById("yogaImg");
+    const imgNum = Math.round(Math.random() * 3);
+    let objImg = document.getElementById("yoga-img");
+    document.getElementById('yoga-img').classList.replace('invisible','visible')
     objImg.src = imgArray[imgNum];
+    able_button()
 }
 
-$(document).ready(function() {showImage()});
+function able_button() {
+    document.getElementById('btn').disabled = false;
+    document.getElementById('check-button').disabled = false;
+    document.getElementById('file-input').disabled = false;
+}
