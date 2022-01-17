@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, jsonify
 from datetime import datetime
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.vgg16 import preprocess_input
-import os
+import requests
+from bs4 import BeautifulSoup
+
 
 # 학습시킨 binary classification model 불러오기 (출력층을 sigmoid 로 설정했기에, predict 하면 아웃풋이 0~1 로 나옴)
 model = tf.keras.models.load_model('static/model/model.h5')
@@ -18,7 +19,43 @@ model_class = ['downdog', 'goddess', 'plank', 'tree', 'warrior2']
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+    data = requests.get('https://www.ytn.co.kr/news/main_news.html', headers=headers)
+
+    soup = BeautifulSoup(data.text, 'html.parser')
+
+    topic = soup.select_one('#wrap > div.newslist_bot.wrapper').select('div.topic > div')
+
+    news = {}
+    i = 1
+    for t in topic:
+        small = {}
+        j = 1
+        for s in t.select('.topic_small'):
+            small_title = s.select_one('.til').text
+            if s.select_one('a > div > div > div > img'):
+                small_img = s.select_one('a > div > div > div > img').attrs['src']
+                small_desc = ''
+            else:
+                small_img = ''
+                small_desc = s.select_one('.topic_small > a > span.desc').text
+            small[j] = {
+                'title': small_title,
+                'img': small_img,
+                'desc': small_desc
+            }
+            j += 1
+        news[i] = {
+            'topic': t.select_one('h2>span>span').text,
+            'big': {
+                'title': t.select_one('a > span').text,
+                'img': t.select_one('.topic_big > a > div > div > div > img').attrs['src']
+            },
+            'small': small
+        }
+        i += 1
+    return render_template('index.html', news=news)
 
 
 # 이전에 드렸던 파일 업로드 자료의 함수와 거의 동일합니다.
