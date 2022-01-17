@@ -2,6 +2,7 @@ $(document).on("input", "input:file", function () {
     readURL(this)
     document.getElementById('user-img').classList.replace('invisible','visible')
 });
+var sound = new Audio("https://raw.githubusercontent.com/Xiija/TestFiles/master/Yuki%20%26%20Tako%2001.mp3");
 
 function readURL(input) {
     if (input.files && input.files[0]) {
@@ -34,6 +35,7 @@ function startTimer(duration, display, bar) {
         if (--timer < 0) {
             showAlert()
             clearInterval(time_set)
+            sound.play();
         }
     }, 1000);
 }
@@ -55,7 +57,7 @@ let imgArray = [];
 	imgArray[1] = "/static/yoga-img/goddess.jpeg";
 	imgArray[2] = "/static/yoga-img/plank.jpeg";
     imgArray[3] = "/static/yoga-img/tree.jpeg";
-    imgArray[4] = "/static/yoga-img/worrier2.jpeg";
+    imgArray[4] = "/static/yoga-img/warrior2.jpeg";
 
 function showImage() {
     const imgNum = Math.round(Math.random() * 4);
@@ -114,10 +116,11 @@ function posting() {
             alert(response["result"])
             alert(randomYogaImg)
             if (response["result"] == randomYogaImg){
-                alert('coreect')
+                alert('coreect');
+                sound.pause();
             }
             else{
-                alert('x')
+                alert('x');
             }
             // alert(response["result"])
             // window.location.reload()
