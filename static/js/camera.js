@@ -55,15 +55,20 @@ function sleep(ms) {
 }
 
 function camera_timer() {
-
-    let timer_input = document.querySelector('.camera-timer-input').value * 1000
+    let timer_input = document.querySelector('.camera-timer-input').value
+    let display = document.querySelector('#ct-check')
     // let timer_input_1000 = timer_input / 1000
     // let minus_num = timer_input / 1000
     // let ct_check = document.getElementById('ct-check')
 
-    setTimeout(function () {
-        takeASnap().then(download);
-    }, timer_input)
+    const timer = setInterval(function () {
+        display.textContent = String(timer_input)
+        if(--timer_input<0){
+          takeASnap().then(download);
+          display.textContent = '찰칵'
+          clearInterval(timer)
+        }
+    }, 1000)
 
     // for (let i = 0; i < timer_input_1000; i++) {
     //     ct_check.textContent = String(minus_num)
