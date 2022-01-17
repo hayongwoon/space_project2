@@ -118,6 +118,8 @@ function posting() {
             if (response["result"] == randomYogaImg){
                 alert('coreect');
                 sound.pause();
+                $("#button-container").addClass('invisible');
+                $("#success-container").attr('class', 'visible');
             }
             else{
                 alert('x');
@@ -126,4 +128,15 @@ function posting() {
             // window.location.reload()
         }
     });
+}
+
+
+function toGather() {
+    const gatherlink = 'https://gather.town/app/aFVnoYb9QJ4GqA3d/sparta-nbcamp-ai';
+    window.location.href = gatherlink;
+}
+
+function toCheckAttend() {
+    const checkAttendLink = 'https://online.spartacodingclub.kr/nbcamp/records';
+    window.location.href = checkAttendLink;
 }
