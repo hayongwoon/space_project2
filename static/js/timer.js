@@ -18,7 +18,7 @@ el.control.addEventListener("click", () =>{
 });
 // reset 버튼 클릭 이벤트입니다. 분은 60분 미만으로 작성가능합니다. 아래 updatetime 함수로 그 값을 보냅니다.
 el.reset.addEventListener("click", () =>{
-    const inputMinutes = prompt("몇 분으로 타이머 맞출거냐? 60미만 숫자만 적어라~");
+    const inputMinutes = prompt("몇 분으로 타이머 맞출거냐? 60미만 숫자만 적어라~ ex)40분이면 40을 입력");
 
     if (inputMinutes < 60) {
         stop();
@@ -26,7 +26,7 @@ el.reset.addEventListener("click", () =>{
         updateTime();
     }
     else if (inputMinutes >= 60) {
-        alert("0~60사이 분을 입력해라~")
+        alert("0~60사이 분을 입력해라~ ex)40분이면 40을 입력")
         }
     else {
         alert("숫자만 입력해라~ ex)40분이면 40을 입력")
