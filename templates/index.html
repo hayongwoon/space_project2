@@ -48,17 +48,6 @@
 </div>
 
 <div id="main_container">
-    <div class="timer">
-        <span class="timer_part timer_minutes">00</span>
-            <span class="timer_part">:</span>
-            <span class="timer_part timer_seconds">00</span>
-            <button type="button" class="timer_btn timer_btn_control timer_btn_start timer_btn_stop">
-                <span class="material-icons">play_arrow</span>
-            </button>
-            <button type="button" class="timer_btn timer_btn_reset">
-                <span class="material-icons">timer</span>
-            </button>
-    </div>
 
     <div id="image-container" class="d-grid gap-4 d-md-flex">
         <div id="left-box">
@@ -71,6 +60,49 @@
                 </button>
             </div>
         </div>
+
+        <div id="clock-body">
+            <div id='main-container'>
+                <h2 id='clock'></h2>
+            </div>
+
+            <div id='alarm-container'>
+                <h3>Set Alarm Time</h3>
+                <label>
+                    <div>
+                        <select id='alarmhrs'></select>
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <select id='alarmmins'></select>
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <select id='alarmsecs'></select>
+                    </div>
+                </label>
+                <label>
+                    <div>
+                        <select id="ampm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                </label>
+                <div id='buttonHolder'>
+                    <div>
+                        <button id='setButton' onClick='alarmSet()'>알람 설정</button>
+                    </div>
+
+                    <div>
+                        <button id='clearButton' onClick='alarmClear()'>알람 재설정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="right-box">
             <div class="img-box shadow mb-5 bg-body rounded">
                 <img style="width:100%; height: 100%;" class="invisible rounded " id="user-img" src="#" alt=""/>
@@ -87,9 +119,9 @@
         <div class="modalBox">
             <video id="vid"></video>
             <div class="camera-timer-div">
-            <label for="camera-timer-input-lavel">타이머 시간(1초=1000)을 입력하세요 : </label>
-            <input type="number" class="camera-timer-input">
-            <button class="camera-timer-button btn btn-outline-secondary" onclick="camera_timer()">확인</button>
+                <label for="camera-timer-input-lavel">타이머 시간(1초=1000)을 입력하세요 : </label>
+                <input type="number" class="camera-timer-input">
+                <button class="camera-timer-button btn btn-outline-secondary" onclick="camera_timer()">확인</button>
             </div>
             <button class="snapshot btn btn-outline-secondary">사진 찍기</button>
             <button class="modal_close_btn btn btn-outline-secondary">닫기</button>

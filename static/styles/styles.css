@@ -9,6 +9,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 10px;
 }
 
 .img-box {
@@ -98,3 +99,78 @@
 .yoga-dif-pose{
     margin-top: 20px;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+#clock-body {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+
+#clock {
+    height:120px;
+    font-size: 40px;
+    font-family: arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  color: black;
+}
+
+h2 {
+	text-align:center;
+
+}
+
+#alarm-container {
+	text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+  color: black;
+}
+
+label {
+	display:inline-block;
+}
+
+.timeofday {
+    background-color: #eee;
+}
+
+.bigger {
+    font-weight:bold;
+    font-size: 18px;
+}
+
+#sounds {
+    text-align: center;
+    padding-top: 20px;
+}
+#buttonHolder{
+    font-family: arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#setButton {
+    background-color:lightgreen;
+    margin-top:10px;
+}
+#clearButton {
+    margin-left: 5px;
+    background-color:red;
+    margin-top:10px;
+}
+
+
+
