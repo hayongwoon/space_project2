@@ -49,8 +49,26 @@ function download(blob){
   a.click();
 }
 
+function sleep(ms) {
+  const wakeUpTime = Date.now() + ms;
+  while (Date.now() < wakeUpTime) {}
+}
 
 function camera_timer() {
-let timer_input = document.querySelector('.camera-timer-input').value
+ let timer_input = document.querySelector('.camera-timer-input').value
+    let timer_input_1000 = timer_input / 1000
+     let minus_num = timer_input / 1000
+  let ct_check = document.getElementById('ct-check')
 
-  setTimeout(function(){takeASnap().then(download);}, timer_input)};
+  // setTimeout(function(){takeASnap().then(download);}, timer_input)
+
+    for (let i = 0; i < timer_input_1000; i++) {
+      ct_check.textContent = String(minus_num)
+      minus_num -= 1
+      sleep(1000)
+      console.log(minus_num)
+      if (minus_num === 0) {
+        takeASnap().then(download)
+      }
+    }
+}
