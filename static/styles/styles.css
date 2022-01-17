@@ -32,7 +32,6 @@
     width: 100%;
     margin-top: 5%;
 }
-
 #time {
     display: flex;
     justify-content: center;
@@ -41,6 +40,38 @@
 
 #progressBar {
     width: 100%;
+}
+타이머 수정 중인 코드입니다.
+.timer_part {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.timer_btn {
+  width: 50px;
+  height: 50px;
+  margin-left: 16px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background: #8208e6;
+  cursor: pointer;
+}
+
+.timer_btn_start {
+  background: #00b84c;
+}
+
+.timer_btn_top {
+  background: #ff0256;
+}
+
+.timer_btn_control {
+
+}
+
+.timer_btn_reset {
+
 }
 
 #alert-container{
