@@ -41,7 +41,7 @@ function updateTime() {
 // innerHTML은 요소 내 포함된 HTML 부분을 가져올 수 있습니다.
 function updateControls() {
     if(interval === null) {
-        el.control.innerHTML = `<span class='material-icons>play_arrow</span>`;
+        el.control.innerHTML = `<span class='material-icons'>play_arrow</span>`;
         el.control.classList.add("timer_btn_start");
         el.control.classList.remove("timer_btn_stop");
     } else {
