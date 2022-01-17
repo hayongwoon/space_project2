@@ -48,13 +48,14 @@
     <div class='camera-modal hidden'>
         <div class="bg"></div>
         <div class="modalBox">
-            {#    카메라#}
             <video id="vid"></video>
-
-            {# 사진 찍기 버튼#}
+            <div class="camera-timer-div">
+            <label for="camera-timer-input-lavel">타이머 시간(초/ms)을 입력하세요 : </label>
+            <input type="text" class="camera-timer-input">
+            <button class="camera-timer-button btn btn-outline-secondary">확인</button>
+            </div>
             <button class="snapshot btn btn-outline-secondary">사진 찍기</button>
             <button class="modal_close_btn btn btn-outline-secondary">닫기</button>
-
         </div>
     </div>
 

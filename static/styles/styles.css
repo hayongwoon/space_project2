@@ -90,16 +90,34 @@
     z-index: 5;
     position: absolute;
     background-color: #fff;
-    width: 400px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 90%;
     padding: 15px;
+    border-radius: 8%;
 }
-
-.modalBox button {
+.camera-timer-button {
     z-index: 5;
     display: block;
-    width: 80px;
-    margin: 0 auto;
+    width: 20%;
+}
+
+.snapshot {
+    z-index: 5;
+    display: block;
+    width: 30%;
+    margin-bottom: 2%;
+
+}
+
+.modal_close_btn {
+     z-index: 5;
+    display: block;
+    width: 30%;
+    margin-bottom: 2%;
 }
 
 .hidden {
@@ -108,10 +126,24 @@
 
 
 #vid {
-    width: 200px;
-    height: 200px;
+    width: 80%;
+    height: 55%;
+    margin-bottom: 10%;
 }
 
 .camera-modal-open-btn {
     margin-top: 5%;
 }
+
+.camera-timer-input {
+ width: 20%;
+}
+
+.camera-timer-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
