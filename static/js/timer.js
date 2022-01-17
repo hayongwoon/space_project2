@@ -18,12 +18,21 @@ el.control.addEventListener("click", () =>{
 });
 // reset 버튼 클릭 이벤트입니다. 분은 60분 미만으로 작성가능합니다. 아래 updatetime 함수로 그 값을 보냅니다.
 el.reset.addEventListener("click", () =>{
-    const inputMinutes = prompt("몇 분으로 타이머 맞출거냐? 숫자만 적어라~");
+    const inputMinutes = prompt("몇 분으로 타이머 맞출거냐? 60미만 숫자만 적어라~");
+
     if (inputMinutes < 60) {
         stop();
         remainingSeconds = inputMinutes * 60;
         updateTime();
     }
+    else if (inputMinutes >= 60) {
+        alert("0~60사이 분을 입력해라~")
+        }
+    else {
+        alert("숫자만 입력해라~ ex)40분이면 40을 입력")
+    }
+
+
 });
 // 분과 초를 정의합니다. math.floor을 사용하는 이유는 소숫점 형태로 나오기 때문에 정수로 표현하기 위해 사용합니다.
 function updateTime() {
