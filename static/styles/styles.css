@@ -99,5 +99,39 @@
     margin-top: 20px;
 }
 
+.camera-modal {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.camera-modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 7%;
+    width: 40%;
+    height: 70%;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
 
