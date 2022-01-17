@@ -2,6 +2,7 @@ $(document).on("input", "input:file", function () {
     readURL(this)
     document.getElementById('user-img').classList.replace('invisible','visible')
 });
+let news_modal = true
 var sound = new Audio("https://raw.githubusercontent.com/Xiija/TestFiles/master/Yuki%20%26%20Tako%2001.mp3");
 
 function readURL(input) {
@@ -128,6 +129,17 @@ function posting() {
             // window.location.reload()
         }
     });
+}
+
+
+function modal(){
+    if(!news_modal){
+        document.getElementById('news-modal').classList.replace('invisible','visible')
+        news_modal = true
+    }else {
+        document.getElementById('news-modal').classList.replace('visible','invisible')
+        news_modal = false
+    }
 }
 
 
