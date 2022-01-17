@@ -1,48 +1,48 @@
 #main_container {
-    min-width: 768px;
-    max-width: 1200px;
-    margin: 0 auto;
+  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #image-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .img-box {
-    width: 400px;
-    height: 400px;
-    background-color: #d0d0d0;
-    border-radius: 15px;
-    margin: auto;
+  width: 400px;
+  height: 400px;
+  background-color: #d0d0d0;
+  border-radius: 15px;
+  margin: auto;
 }
 
-.btn-wrapper{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #button-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
 }
 #time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #progressBar {
-    width: 100%;
+  width: 100%;
 }
 
 .timer_part {
@@ -69,108 +69,123 @@
   background: #ff0256;
 }
 
-.timer_btn_control {
-
+/* .timer_btn_control {
 }
 
 .timer_btn_reset {
+} */
 
+#alert-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-#alert-container{
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
+.alert-wrapper {
+  width: 500px;
 }
 
-.alert-wrapper{
-    width: 500px;
-}
-
-#success-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.yoga-dif-pose{
-    margin-top: 20px;
+.yoga-dif-pose {
+  margin-top: 20px;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #clock-body {
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
 
-
 #clock {
-    height:120px;
-    font-size: 40px;
-    font-family: arial;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 120px;
+  font-size: 40px;
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
 }
 
 h2 {
-	text-align:center;
-
+  text-align: center;
 }
 
 #alarm-container {
-	text-align:center;
-    font-family: Verdana;
-    font-size: 0.6em;
-    padding: 0.7em;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 0.6em;
+  padding: 0.7em;
   color: black;
 }
 
 label {
-	display:inline-block;
+  display: inline-block;
 }
 
 .timeofday {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .bigger {
-    font-weight:bold;
-    font-size: 18px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #sounds {
-    text-align: center;
-    padding-top: 20px;
+  text-align: center;
+  padding-top: 20px;
 }
-#buttonHolder{
-    font-family: arial;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#buttonHolder {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #setButton {
-    background-color:lightgreen;
-    margin-top:10px;
+  background-color: lightgreen;
+  margin-top: 10px;
 }
 #clearButton {
-    margin-left: 5px;
-    background-color:red;
-    margin-top:10px;
+  margin-left: 5px;
+  background-color: red;
+  margin-top: 10px;
 }
 
+/* success-container 정의 */
 
+#success-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
+#success-container > .icon-wrapper {
+  width: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#success-container > .icon-wrapper > img {
+  width: 80px;
+  height: 80px;
+  border: solid 2px transparent;
+  border-radius: 50%;
+}
+
+#success-container > .icon-wrapper > p {
+  font-size: 10px;
+  margin-top: 5%;
+}

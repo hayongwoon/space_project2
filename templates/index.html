@@ -149,12 +149,23 @@
             <button onclick="posting()" class="btn btn-dark btn-lg" id="check-button" disabled>동작 확인</button>
         </div>
     </div>
-
+  
     <div id="success-container" class="invisible">
-        <button type="button" class="btn btn-link" onclick="toGather()">게더로 이동</button>
-        <button type="button" class="btn btn-link" onclick="toCheckAttend()">출석체크로 이동</button>
-        <button type="button" class="btn btn-link" onclick="modal()">오늘 뉴스보기</button>
+        <div class="icon-wrapper" onclick="toGather()">
+            <img src="static/icon/gathertown.jpg" alt="gather-icon" class="img-circle">
+            <p>게더타운</p>
+        </div>
+        <div class="icon-wrapper" onclick="toCheckAttend()">
+            <img src="static/icon/checkattend.png" alt="checkattend-icon" class="img-circle">
+            <p>출석체크</p>
+        </div>
+        <div class="icon-wrapper" onclick="modal()">
+            <img src="static/icon/news.png" alt="news-icon" class="img-circle">
+            <p>오늘뉴스</p>
+        </div>       
     </div>
+
+
 
 </div>
 <script src="/static/js/main.js" type="text/javascript"></script>
