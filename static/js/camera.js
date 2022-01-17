@@ -48,3 +48,9 @@ function download(blob){
   document.body.appendChild(a);
   a.click();
 }
+
+
+function camera_timer() {
+let timer_input = document.querySelector('.camera-timer-input').value
+  setTimeout(function(){alert("hi!");}, timer_input)
+}
