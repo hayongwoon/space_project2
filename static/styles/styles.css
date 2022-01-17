@@ -1,3 +1,7 @@
+body{
+  font-family: arial;
+}
+
 #main_container {
   min-width: 768px;
   max-width: 1200px;
@@ -120,7 +124,7 @@ h2 {
 
 #alarm-container {
   text-align: center;
-  font-family: Verdana;
+  font-family: arial;
   font-size: 0.6em;
   padding: 0.7em;
   color: black;
@@ -152,12 +156,11 @@ label {
 }
 
 #setButton {
-  background-color: lightgreen;
   margin-top: 10px;
 }
 #clearButton {
   margin-left: 5px;
-  background-color: red;
+
   margin-top: 10px;
 }
 
@@ -189,3 +192,31 @@ label {
   font-size: 10px;
   margin-top: 5%;
 }
+
+#description_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin-top: 120px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#description_content{
+  width: 450px;
+  border: 1px dotted;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+
+}
+
+#description_content-second{
+  font-size: large;
+}
+

@@ -57,14 +57,14 @@ function posting() {
         processData: false,
         success: function (response) {
             if (response["result"] == randomYogaImg){
-                alert('coreect');
+                alert('correct!!');
                 alarmClear();
                 sound.pause();
                 $("#button-container").addClass('invisible');
                 $("#success-container").attr('class', 'visible');
             }
             else{
-                alert('x');
+                alert('사진에 맞는 동작을 취해주세요!');
             }
             // alert(response["result"])
             // window.location.reload()

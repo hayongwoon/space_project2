@@ -162,3 +162,5 @@ function alarmClear() {
     document.getElementById('alarmsecs').disabled = false;
     document.getElementById('ampm').disabled = false;
 }
+
+
