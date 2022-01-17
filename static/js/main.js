@@ -13,7 +13,7 @@ function readURL(input) {
     }
 }
 
-//parseInt는 문자열 인자를 파싱을 통해 특정 정수로 표현할 수 있습니다.
+/*//parseInt는 문자열 인자를 파싱을 통해 특정 정수로 표현할 수 있습니다.
 function startTimer(duration, display, bar) {
     let timer = duration, minutes, seconds;
     const time_set = setInterval(function () {
@@ -33,23 +33,22 @@ function startTimer(duration, display, bar) {
         // timeout 이 1000일 때는 1초 10000일 때는 10초의 지연시간이 있고 다시 실행을 반복합니다.(위의 setInterval 메서드)
         if (--timer < 0) {
             showAlert()
-            showImage()
             clearInterval(time_set)
         }
     }, 1000);
 }
-
-function showAlert(){
-    document.getElementById('alert-container').classList.replace('invisible','visible')
-}
-
 // document.querySelector는 CSS의 클래스, 아이디를 찾아 같은 값을 반환합니다.
 window.onload = function () {
     let minutes = 5,
         display = document.querySelector('#time');
     let bar = document.querySelector('#progressBar');
     startTimer(minutes, display, bar);
-};
+};*/
+
+
+function showAlert(){
+    document.getElementById('alert-container').classList.replace('invisible','visible')
+}
 
 let imgArray = [];
 	imgArray[0] = "/static/yoga-img/downdog.jpeg";
