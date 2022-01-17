@@ -55,6 +55,7 @@ function sleep(ms) {
 }
 
 function camera_timer() {
+
     let timer_input = document.querySelector('.camera-timer-input').value * 1000
     // let timer_input_1000 = timer_input / 1000
     // let minus_num = timer_input / 1000
