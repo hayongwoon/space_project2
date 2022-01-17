@@ -23,8 +23,11 @@
     - 예시
         1. 매칭 성공하면 게더로 연결
         2. 매칭 성공하면 웹 사이트 연결 혹은 자체 로그인 기능
-        3. 요가 정보 크롤링하여 유저에게 추천
+        3. 요가 정보나 뉴스 크롤링하여 유저에게 추천
         
 - 딥러닝으로 구현한 분류 모델을 실제 어플리케이션에 적용해보는 기회
-    - [https://www.kaggle.com/elysian01/yoga-pose-classification](https://www.kaggle.com/elysian01/yoga-pose-classification)
+    - [https://www.kaggle.com/niharika41298/yoga-poses-dataset](https://www.kaggle.com/niharika41298/yoga-poses-dataset)
 
+# 프로젝트 구성원 및 포지션 분배
+
+![image](https://user-images.githubusercontent.com/91467403/149729848-c03a231c-fcaa-42a4-a685-924d8c13d4bc.png)
