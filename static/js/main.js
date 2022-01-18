@@ -83,13 +83,13 @@ function modal(){
     }
 }
 
-
-function toGather() {
-    const gatherlink = 'https://gather.town/app/aFVnoYb9QJ4GqA3d/sparta-nbcamp-ai';
-    window.location.href = gatherlink;
-}
-
-function toCheckAttend() {
-    const checkAttendLink = 'https://online.spartacodingclub.kr/nbcamp/records';
-    window.location.href = checkAttendLink;
-}
+//
+// function toGather() {
+//     const gatherlink = 'https://gather.town/app/aFVnoYb9QJ4GqA3d/sparta-nbcamp-ai';
+//     window.location.href = gatherlink;
+// }
+//
+// function toCheckAttend() {
+//     const checkAttendLink = 'https://online.spartacodingclub.kr/nbcamp/records';
+//     window.location.href = checkAttendLink;
+// }
